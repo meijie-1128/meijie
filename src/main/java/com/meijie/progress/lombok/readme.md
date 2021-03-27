@@ -1,0 +1,10 @@
+1.使用lombok
+    a.安装lombok插件
+    b.重启idea
+    c.添加maven依赖
+    <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.16.10</version>
+     </dependency>
+
