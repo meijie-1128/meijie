@@ -12,5 +12,4 @@ public class ProgressApplication {
 		SpringApplication.run(ProgressApplication.class, args);
 		log.info("梅杰的个人项目启动成功");
 	}
-
 }

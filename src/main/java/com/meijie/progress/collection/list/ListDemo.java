@@ -53,8 +53,23 @@ public class ListDemo {
         personList.add(person01);
         personList.add(person02);
         personList.add(person03);
-        // 排序方法1
+        // 排序方法1 （结合implements Comparable<Person>）
         Collections.sort(personList);
+
+        // 排序方法2
+        Collections.sort(personList, (Person a, Person b) -> {
+            if(a.age == b.age) {
+                return (int)(b.height - a.height);
+            }
+            return a.age - b.age;
+        });
+        // 排序方法3
+        Collections.sort(personList, (Person a, Person b) -> {
+            if(a.age == b.age) {
+                return (int)(b.height - a.height);
+            }
+            return a.age - b.age;
+        });
 
         personList.forEach(item -> {
             log.info("排序后的结果为:{}",item);
