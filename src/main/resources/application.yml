@@ -1,3 +1,5 @@
-server.port: 12345
-
-applicationDemo: 123
+server:
+ port: 12345
+ servlet:
+   ##SpringBoot项目名（接口访问需带上此字段）
+   context-path: /meijie
