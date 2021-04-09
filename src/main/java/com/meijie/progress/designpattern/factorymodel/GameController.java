@@ -19,6 +19,6 @@ public class GameController {
     public void receiveWechatInfo(@RequestBody Map<String,Object> paramMap) {
         String gameType = MapUtils.getString(paramMap, "gameType");
         GameService gameService = gameFactory.getGameService(gameType);
-        gameService.handleWeChatPushInfo();
+        gameService.handleWeChatPushInfo(paramMap);
     }
 }
