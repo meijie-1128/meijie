@@ -16,7 +16,7 @@ import java.util.Map;
 @Slf4j
 public class GameAspect {
 
-    @Pointcut("execution(* com.meijie.progress.designpattern.factorymodel.GameService.handleWeChatPushInfo(..))")
+    @Pointcut("execution(* com.meijie.progress.designpattern.create.factorymodel.GameService.handleWeChatPushInfo(..))")
     public void pointcut(){}
 
     @Before("pointcut()")
