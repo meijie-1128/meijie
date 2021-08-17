@@ -17,17 +17,23 @@ import java.util.Map;
 public class GameAspect {
 
     @Pointcut("execution(* com.meijie.progress.designpattern.create.factorymodel.GameService.handleWeChatPushInfo(..))")
-    public void pointcut(){}
+    public void pointcut() {
+    }
 
     @Before("pointcut()")
-    public void before(JoinPoint joinPoint){
+    public void before(JoinPoint joinPoint) {
         Object[] args = joinPoint.getArgs();
-        Map<String,Object> paramMap = (Map<String,Object>)args[0];
+        Map<String, Object> paramMap = (Map<String, Object>) args[0];
         log.info("执行不同game逻辑前，统一入库操作,参数为:{}", MapUtils.getString(paramMap, "gameType"));
     }
 
     @After("pointcut()")
-    public void after(JoinPoint joinPoint){
+    public void after(JoinPoint joinPoint) {
         log.info("执行不同game逻辑后续操作");
     }
+}
+
+
+class TargetOnject{
+
 }
